@@ -1,0 +1,1 @@
+SELECT * FROM `sample` LEFT JOIN `user` ON `sample`.`rac_id`=`user`.`userrac_id` UNION ALL SELECT * FROM `sample` RIGHT JOIN user ON `sample`.`rac_id`=`user`.`userrac_id`
