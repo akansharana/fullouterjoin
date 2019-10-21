@@ -1,0 +1,10 @@
+find ouery in cake php
+
+public function index() { 
+        $this->layout = 'NULL';
+         $data=$this->Page->find('all',array(
+             'fields' => array('name','mobile','country')
+         )) ;
+         print_r($data);
+         die();
+    }
