@@ -1,4 +1,4 @@
-find ouery in cake php
+find by fild name  query in cake php
 
 public function index() { 
         $this->layout = 'NULL';
@@ -8,3 +8,8 @@ public function index() {
          print_r($data);
          die();
     }
+    
+    find query where firstcolumn = secondcolumn
+    $data=$this->Page->find('all',array(
+             'condition' => array('page.name'=>'Page.mobile')
+         )) ;
