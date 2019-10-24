@@ -13,3 +13,16 @@ public function index() {
     $data=$this->Page->find('all',array(
              'condition' => array('page.name'=>'Page.mobile')
          )) ;
+sql select query in cakephp
+$data = $this->request->data;
+
+
+          $query2= $this->Page->query("SELECT * FROM `pages` WHERE order_id >= '".$data['Page']['from_id']."' AND order_id <=  '".$data['Page']['to_id']."'OR order_date = '".$data['Page']['from_date']."' ");
+           foreach ($query2 as $value) {  
+           
+        $header_row = $value['pages']['order_id']."\t". $value['pages']['order_customer_name'] ."\t ".$value['pages']['order_item']." \t ".$value['pages']['order_value']." \t ".$value['pages']['order_date']."\n";
+          
+        
+      
+          
+    }
